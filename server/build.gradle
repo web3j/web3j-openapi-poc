@@ -1,5 +1,6 @@
 description 'web3j-openapi server module'
 
+apply plugin: 'io.epirus'
 apply plugin: 'org.unbroken-dome.test-sets'
 
 testSets {
@@ -46,18 +47,6 @@ task copyOpenApiResources(type: Copy) {
     into "$outputDirectory/$generatedProjectName/server/src/main/resources"
     delete('src/main/resources/logging.properties')
     delete('src/main/resources/META-INF')
-}
-
-task installEpirusCli(type: Download, group: 'epirus') {
-    src 'http://get.epirus.io'
-    dest new File("$buildDir/tmp", 'epirus-installer.sh')
-    onlyIfModified true
-    doLast {
-        project.exec {
-            commandLine('chmod', '+x', "$buildDir/tmp/epirus-installer.sh")
-            commandLine("$buildDir/tmp/epirus-installer.sh")
-        }
-    }
 }
 
 task generateOpenApiProject(type: Exec) {

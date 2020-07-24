@@ -4,6 +4,7 @@ buildscript {
     }
 
     dependencies {
+        classpath 'io.epirus:epirus-gradle-plugin:2.0.0-SNAPSHOT'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         classpath 'org.unbroken-dome.gradle-plugins:gradle-testsets-plugin:2.1.1'
