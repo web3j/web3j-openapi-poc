@@ -55,7 +55,7 @@ internal class ResourcesImplGenerator(
         )
 
         val contractClass = ClassName(
-            "$packageName.wrappers",
+            packageName,
             contractName.capitalize()
         )
         val extendedUriInfoClass = ClassName(

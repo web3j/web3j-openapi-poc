@@ -49,7 +49,7 @@ class StructExtensionsGenerator(
             val structName = structDefinition!!.internalType.structName
 
             val contractClass = ClassName(
-                "$packageName.wrappers.${contractName.capitalize()}",
+                "$packageName.${contractName.capitalize()}",
                 structName
             )
 
